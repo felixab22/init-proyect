@@ -4,17 +4,30 @@ export const LoginPage = () => {
   const navigate = useNavigate();
 
   const onLogin = () => {
-    navigate("/marvel", { replace: true });
+    navigate("/inicio", { replace: true });
   };
   return (
     <>
-      <div className="container mt-5">
-        <h1>Login</h1>
-        <hr />
-
-        <button type="button" className="btn btn-primary" onClick={onLogin}>Login</button>
-      </div>
+      <form>
+        <div className="group">
+          <input type="text" />
+          <span className="highlight"></span>
+          <span className="bar"></span>
+          <label>Nombre</label>
+        </div>
+        <div className="group">
+          <input type="password" />
+          <span className="highlight"></span>
+          <span className="bar"></span>
+          <label>Contraseña</label>
+        </div>
+        <button type="button" className="button buttonBlue" onClick={onLogin}>
+          Login
+          <div className="ripples buttonRipples">
+            <span className="ripplesCircle"></span>
+          </div>
+        </button>
+      </form>
     </>
-  )
-}
-
+  );
+};
