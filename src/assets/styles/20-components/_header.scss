@@ -1,0 +1,78 @@
+ header{  
+  .menu {
+    position: fixed; /*nota:pierde sus propiedades de alto y ancho al usar fixed*/
+    left: 0;
+    bottom: var(--header-heigth);
+    width: 100%;
+    display: flex; /*para acomodar los componentes del menu*/
+    flex-direction: column;
+    opacity: 0; /*ocultaremos a menu para luego habilitarlo con una funcion de js*/
+    transition: opacity 0.5s ease;
+    pointer-events: none; /*para que no reacciones a interactividad*/
+    background-color: var(--second-color);
+  }
+  
+  .menu.is-active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .menu span {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-style: -var(--font);
+    color: var(--first-color);
+  }
+  
+  .menu span:hover {
+    background-color: var(--first-color);
+    color: var(--color-02);
+  }
+  //DESKTOP MENU
+  @media screen and (min-width: 1024px) {
+    /*se iran quitando algunas propiedases que tenian como mobile para adptar a desktop*/
+    .menu-btn {
+      display: none; /*para desktop no necesitamos en este boton*/
+    }
+    .menu {
+      position: static; /*se le debe regresar al valor natural*/
+      opacity: 1;
+      pointer-events: auto;
+      width: auto;
+      flex-direction: row;
+    }
+    .menu a {
+      padding: 0 1rem;
+    }
+    .menu a:last-child {
+      /*a la ultima de la lista del menu  se le quita el pading*/
+      padding: 0;
+    }
+  
+    .menu a:hover {
+      background-color: transparent;
+    }
+
+    .example-spacer {
+  flex: 1 1 auto;
+    }
+  .example-spacer2 {
+  flex: 0.2 0.2 auto;
+
+  }
+  .second{
+    background-color: white;
+  }
+
+  .logo-sisgevo{
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    font-style: -var(--font);
+    color:var(--color-02)
+  }
+}}

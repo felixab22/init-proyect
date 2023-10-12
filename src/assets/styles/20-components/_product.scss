@@ -1,0 +1,22 @@
+.product {
+  padding: 2rem;
+  cursor: pointer;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+  button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: none;
+  }
+}
+.product div:hover button {
+  display: block;
+  margin-left: auto;
+  width: 50%;
+}

@@ -1,0 +1,17 @@
+.md {
+  &-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  &-6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+section.global {
+  &.md {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+  }
+}
